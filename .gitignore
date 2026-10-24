@@ -17,12 +17,19 @@ test-results/
 .env
 .env.*
 !.env.example
+.npmrc.local
 *.keystore
 *.jks
 *.p12
 *.pem
+*.key
 key.properties
 google-services.json
+
+# 本地题库备份 / 导出（真实题目绝不进仓库）
+backup/
+exports/
+*.backup.json
 
 # 编辑器 / 系统
 .vscode/*
