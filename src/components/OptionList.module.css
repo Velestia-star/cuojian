@@ -53,7 +53,7 @@
 .checked .letter {
   background: var(--accent);
   border-color: var(--accent);
-  color: #fff;
+  color: var(--accent-ink);
 }
 
 .correct {
@@ -64,7 +64,7 @@
 .correct .letter {
   background: var(--right);
   border-color: var(--right);
-  color: #fff;
+  color: var(--accent-ink);
 }
 
 .wrong {
@@ -75,5 +75,5 @@
 .wrong .letter {
   background: var(--wrong);
   border-color: var(--wrong);
-  color: #fff;
+  color: var(--accent-ink);
 }

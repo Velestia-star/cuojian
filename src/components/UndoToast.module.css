@@ -10,9 +10,10 @@
   max-width: min(560px, calc(100vw - 28px));
   padding: 10px 12px 10px 16px;
   border-radius: 12px;
-  background: #1b1c1e;
+  background: #23252a;
+  border: 1px solid rgba(255, 255, 255, 0.14);
   color: #f7f6f2;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
   animation: slideUp 0.18s ease;
 }
 
@@ -31,7 +32,7 @@
   border-radius: 8px;
   padding: 6px 12px;
   background: var(--accent);
-  color: #fff;
+  color: var(--accent-ink);
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;

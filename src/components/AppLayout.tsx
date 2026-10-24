@@ -1,10 +1,14 @@
 import { NavLink, Outlet } from 'react-router-dom';
+import { useTheme } from '../app/useTheme';
 import styles from './AppLayout.module.css';
 
 const navClass = ({ isActive }: { isActive: boolean }): string =>
   isActive ? `${styles.link} ${styles.active}` : styles.link;
 
 export function AppLayout() {
+  const { theme, toggle } = useTheme();
+  const nextLabel = theme === 'dark' ? '浅色' : '深色';
+
   return (
     <div className={styles.shell}>
       <header className={styles.header}>
@@ -20,6 +24,15 @@ export function AppLayout() {
           <NavLink to="/new" className={navClass}>
             录入
           </NavLink>
+          <button
+            type="button"
+            className="btn btnGhost"
+            onClick={toggle}
+            aria-label={`切换到${nextLabel}主题`}
+            title={`切换到${nextLabel}主题`}
+          >
+            {theme === 'dark' ? '☀️' : '🌙'}
+          </button>
         </nav>
       </header>
       <main className={styles.main}>

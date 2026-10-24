@@ -6,6 +6,8 @@
   --line: #e6e4de;
   --accent: #0e6b58;
   --accent-soft: #e6f1ed;
+  /* 落在 accent 底色上的文字色：浅色主题用白字，深色主题用深字 */
+  --accent-ink: #ffffff;
   --wrong: #b3261e;
   --wrong-soft: #fbeae8;
   --right: #0e6b58;
@@ -14,6 +16,25 @@
   --radius: 14px;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 8px 24px rgba(0, 0, 0, 0.05);
   color-scheme: light;
+}
+
+/* 深色主题：只换变量，组件一律引用变量，所以不需要给每个组件写两套样式 */
+:root[data-theme='dark'] {
+  --bg: #121316;
+  --card: #1a1c20;
+  --ink: #e8e9ec;
+  --muted: #9a9ca4;
+  --line: #2b2e35;
+  --accent: #5fd3b6;
+  --accent-soft: #16302a;
+  --accent-ink: #07211b;
+  --wrong: #f08a8a;
+  --wrong-soft: #2f1d1d;
+  --right: #5fd3b6;
+  --right-soft: #16302a;
+  --gold: #e5b454;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 8px 24px rgba(0, 0, 0, 0.3);
+  color-scheme: dark;
 }
 
 *,
@@ -87,13 +108,13 @@ p {
 .btnPrimary {
   background: var(--accent);
   border-color: var(--accent);
-  color: #fff;
+  color: var(--accent-ink);
 }
 
 .btnPrimary:hover:not(:disabled) {
-  background: #0b5747;
-  border-color: #0b5747;
-  color: #fff;
+  background: color-mix(in srgb, var(--accent) 86%, #000);
+  border-color: color-mix(in srgb, var(--accent) 86%, #000);
+  color: var(--accent-ink);
 }
 
 .btnGhost {
