@@ -26,6 +26,8 @@ if not defined NODE_EXE (
 )
 
 for %%I in ("%NODE_EXE%") do set "NODE_DIR=%%~dpI"
+rem npm 内部还会再调用一次 node，所以必须把 node 所在目录放进 PATH
+set "PATH=%NODE_DIR%;%PATH%"
 set "NPM_CMD=%NODE_DIR%npm.cmd"
 if not exist "%NPM_CMD%" (
   echo  [错笺] 找到了 node，但同目录下没有 npm.cmd。
