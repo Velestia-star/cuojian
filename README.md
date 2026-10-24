@@ -22,6 +22,10 @@ npm run build      # 生产构建（产物在 dist/）
 ```
 
 > 本机 Node 不在 PATH 上时，用绝对路径：`D:\node.js\npm.cmd run dev`。
+>
+> **Windows 用户**：直接双击根目录的 `启动.cmd`。它会自动找 Node（含
+> `D:\node.js`、`C:\Program Files\nodejs` 等常见位置）、缺依赖时自动 `npm install`、
+> 启动后自动打开浏览器；关掉那个黑窗口就停止服务。
 
 ### 发布到 GitHub Pages
 
