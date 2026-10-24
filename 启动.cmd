@@ -51,10 +51,12 @@ if not exist "node_modules\" (
 )
 
 rem 3) 启动开发服务器，并自动打开浏览器
+rem    固定 --host 127.0.0.1：浏览器把 localhost 和 127.0.0.1 当两个站点，
+rem    两者 IndexedDB 不互通，统一用 127.0.0.1 才不会「换了入口题库就空了」。
 echo  [错笺] 正在启动…… 浏览器会自动打开 http://127.0.0.1:5173/
 echo         用完直接关掉这个黑色窗口即可停止服务。
 echo.
-call "%NPM_CMD%" run dev -- --port 5173 --strictPort --open
+call "%NPM_CMD%" run dev -- --port 5173 --strictPort --host 127.0.0.1 --open
 
 if errorlevel 1 (
   echo.
