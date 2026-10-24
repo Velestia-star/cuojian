@@ -1,0 +1,71 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mark {
+  flex: 0 0 34px;
+  height: 34px;
+  border-radius: 9px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.markOn {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.input {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.tag {
+  flex: 0 0 auto;
+  font-size: 11px;
+  color: var(--gold);
+  border: 1px solid color-mix(in srgb, var(--gold) 35%, var(--line));
+  border-radius: 999px;
+  padding: 1px 8px;
+  white-space: nowrap;
+}
+
+.del {
+  flex: 0 0 auto;
+  border: 1px solid transparent;
+  background: none;
+  color: var(--muted);
+  font-size: 13px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.del:hover:not(:disabled) {
+  color: var(--wrong);
+}
+
+.del:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}

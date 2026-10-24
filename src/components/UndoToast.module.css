@@ -1,0 +1,49 @@
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 22px;
+  transform: translateX(-50%);
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  max-width: min(560px, calc(100vw - 28px));
+  padding: 10px 12px 10px 16px;
+  border-radius: 12px;
+  background: #1b1c1e;
+  color: #f7f6f2;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+  animation: slideUp 0.18s ease;
+}
+
+.label {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.undo {
+  flex: 0 0 auto;
+  appearance: none;
+  border: 0;
+  border-radius: 8px;
+  padding: 6px 12px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 8px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}

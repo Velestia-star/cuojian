@@ -1,0 +1,79 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.option {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+  text-align: left;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--card);
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.option:hover:not(:disabled) {
+  border-color: var(--accent);
+}
+
+.option:disabled {
+  cursor: default;
+}
+
+.letter {
+  flex: 0 0 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  border-radius: 7px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.text {
+  flex: 1 1 auto;
+  line-height: 1.6;
+  padding-top: 1px;
+}
+
+.checked {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.checked .letter {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.correct {
+  border-color: var(--right);
+  background: var(--right-soft);
+}
+
+.correct .letter {
+  background: var(--right);
+  border-color: var(--right);
+  color: #fff;
+}
+
+.wrong {
+  border-color: var(--wrong);
+  background: var(--wrong-soft);
+}
+
+.wrong .letter {
+  background: var(--wrong);
+  border-color: var(--wrong);
+  color: #fff;
+}

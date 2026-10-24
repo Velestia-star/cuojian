@@ -1,0 +1,36 @@
+# 依赖
+node_modules/
+.pnpm-store/
+.npm-cache/
+
+# 构建产物
+dist/
+dist-ssr/
+*.tsbuildinfo
+
+# 测试与覆盖率
+coverage/
+playwright-report/
+test-results/
+
+# 本地环境与密钥（绝不允许提交）
+.env
+.env.*
+!.env.example
+*.keystore
+*.jks
+*.p12
+*.pem
+key.properties
+google-services.json
+
+# 编辑器 / 系统
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+
+# 日志
+*.log
+npm-debug.log*

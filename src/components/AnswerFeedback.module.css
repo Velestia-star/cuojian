@@ -1,0 +1,54 @@
+.banner {
+  margin-top: 16px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  animation: fadeIn 0.16s ease;
+}
+
+.right {
+  background: var(--right-soft);
+  border-color: color-mix(in srgb, var(--right) 35%, var(--line));
+}
+
+.wrong {
+  background: var(--wrong-soft);
+  border-color: color-mix(in srgb, var(--wrong) 30%, var(--line));
+}
+
+.head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 6px;
+  color: var(--ink);
+}
+
+.next {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.line {
+  display: flex;
+  gap: 8px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.k {
+  flex: 0 0 auto;
+  color: var(--muted);
+  font-size: 12px;
+  padding-top: 2px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

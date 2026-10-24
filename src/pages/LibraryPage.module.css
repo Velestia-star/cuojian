@@ -1,0 +1,154 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.hero {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 6px 2px 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 760;
+  letter-spacing: -0.02em;
+}
+
+.sub {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.item {
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+
+.itemArchived {
+  opacity: 0.62;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.kind,
+.subject,
+.lock {
+  font-size: 11px;
+  line-height: 18px;
+  padding: 0 8px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.kind {
+  color: var(--accent);
+  border-color: color-mix(in srgb, var(--accent) 30%, var(--line));
+  background: var(--accent-soft);
+}
+
+.lock {
+  color: var(--gold);
+  border-color: color-mix(in srgb, var(--gold) 35%, var(--line));
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.count {
+  color: var(--muted);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.stem {
+  white-space: pre-wrap;
+  line-height: 1.65;
+}
+
+.foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.empty {
+  max-width: 520px;
+  margin: 8vh auto 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.emptyTitle {
+  font-size: 30px;
+  font-weight: 760;
+  letter-spacing: -0.02em;
+}
+
+.emptyText {
+  color: var(--ink);
+  line-height: 1.7;
+}
+
+.emptyHint {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+@media (max-width: 520px) {
+  .hero {
+    align-items: flex-start;
+  }
+
+  .actions {
+    width: 100%;
+  }
+
+  .actions > * {
+    flex: 1 1 auto;
+  }
+}
