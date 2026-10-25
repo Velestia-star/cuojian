@@ -1,0 +1,11 @@
+# 换行策略（很重要）：git 的规则是「后匹配优先」，所以通配符必须放最前。
+# GitHub 的「Download ZIP」给的是仓库里的原始字节，不经过任何 checkout 转换。
+# 一旦 .cmd 被规范成 LF，别人解压后双击可能解析失败、窗口瞬间闪退。
+* text=auto
+
+# 批处理文件不做换行规范化，原样保存 CRLF（别人下载 ZIP 也拿到 CRLF）
+*.cmd -text
+*.bat -text
+
+# PowerShell 脚本统一 CRLF（Windows PowerShell 5.1 读它们是安全的）
+*.ps1 text eol=crlf
