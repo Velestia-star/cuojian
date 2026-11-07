@@ -42,7 +42,7 @@ if (-not $nodeExe) {
     Write-Host '  两个办法，选一个：'
     Write-Host ''
     Write-Host '    A. 不装环境，直接用在线版（推荐，点开就能用）：' -ForegroundColor Green
-    Write-Host '       https://wei238982377.github.io/cuojian/'
+    Write-Host '       https://Velestia-star.github.io/cuojian/'
     Write-Host ''
     Write-Host '    B. 想在本机跑，先装 Node.js 18 或更高版本：'
     Write-Host '       https://nodejs.org/zh-cn/download'

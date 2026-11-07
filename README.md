@@ -28,7 +28,7 @@ npm run build      # 生产构建（产物在 dist/）
 > 启动后自动打开浏览器；关掉那个黑窗口就停止服务。失败时窗口会停住并告诉你原因。
 >
 > ⚠️ 从 GitHub 下载 ZIP 的**非开发者**：本机运行需要先装 [Node.js 18+](https://nodejs.org/)。
-> 不想装环境就直接用在线版：<https://wei238982377.github.io/cuojian/>（功能完全一样，数据存在你自己浏览器里，不联网上传）。
+> 不想装环境就直接用在线版：<https://Velestia-star.github.io/cuojian/>（功能完全一样，数据存在你自己浏览器里，不联网上传）。
 
 ### 发布到 GitHub Pages
 

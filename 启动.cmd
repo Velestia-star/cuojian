@@ -12,7 +12,7 @@ exit /b 0
 echo.
 echo   Windows PowerShell was not found on this computer.
 echo   Easiest fix: just use the online version (no install needed):
-echo   https://wei238982377.github.io/cuojian/
+echo   https://Velestia-star.github.io/cuojian/
 echo.
 pause
 exit /b 1
